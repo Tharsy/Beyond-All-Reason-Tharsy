@@ -145,7 +145,13 @@ local soundData = {
 	-- WEAPON SOUNDS MULTI (more concurrent)
 	['weapons-mult'] = {
 		gain = 1.2 * 0.3,
-		pitchmod = 0.17,
+		pitchmod = {
+            default = 0.17,
+            custom = {
+                ['^mgun3'] = 0.01,
+                ['^segat'] = 0.0,
+            },
+        },
 		gainmod  = 0.2 * 0.3,
 		dopplerscale = 1.0,
 		maxconcurrent = 15,
